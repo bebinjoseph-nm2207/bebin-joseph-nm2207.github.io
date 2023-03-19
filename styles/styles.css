@@ -8,6 +8,10 @@ body {
   background-image: url(../resources/brahmospic.jpg);
 }
 
+.backgroundinfo {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .mouse {
   font-size: 24px;
 }
