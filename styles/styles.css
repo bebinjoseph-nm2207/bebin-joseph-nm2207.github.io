@@ -2,9 +2,10 @@ body {
   background-color: #df1ab1;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: white;
+  /*color: white; */
   padding-left: 12px;
   padding-top: 4px;
+  background-image: url(../resources/brahmospic.jpg);
 }
 
 .mouse {
@@ -15,11 +16,31 @@ body {
   color: #fbbf24;
 }
 
-h2 {
-  color: #f9a8d4;
+.war-table {
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+ color: #fff; 
+ background-color: #900;*/
+  border: 2px solid #333;
+ 
 }
 
-/* CSS */
+.war-table td {
+  padding: 10px;
+  border: 2px solid #333;
+}
+
+.war-table tr:nth-child(odd) {
+  background-color: #a00;
+}
+
+.war-table tr:nth-child(even) {
+  background-color: #c00;
+}
+
+
+/* CSS
 button {
   appearance: none;
   background-color: #b45309;
@@ -40,4 +61,4 @@ button {
 
 button:hover {
   background-color: #92400e;
-}
+}*/
