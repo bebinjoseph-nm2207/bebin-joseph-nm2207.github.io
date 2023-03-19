@@ -21,7 +21,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
  color: #fff; 
- background-color: #900;*/
+ background-color: #900;
   border: 2px solid #333;
  
 }
@@ -37,6 +37,40 @@ body {
 
 .war-table tr:nth-child(even) {
   background-color: #c00;
+}
+
+.finalprojdoc {
+  font-family: 'Roboto Mono', monospace;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.finalprojdoc th {
+  background-color: #66d9ef;
+  color: #2e3436;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.finalprojdoc td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.finalprojdoc tr:nth-child(even) {
+  background-color: #073642;
+  color: #eee;
+}
+
+.finalprojdoc tr:nth-child(odd) {
+  background-color: #002b36;
+  color: #eee;
+}
+
+.finalprojdoc tr:hover {
+  background-color: #66d9ef;
+  color: #2e3436;
 }
 
 
