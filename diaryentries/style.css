@@ -1,0 +1,74 @@
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    /*background-color: #f5d5bc; I like this colour */
+    background-image: url(../resources/brahmospic.jpg);
+  }
+  
+  .page {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px #000;
+  }
+  
+  .header {
+    background-color: #9b2915;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  .header h2{
+    font-size: 22px;
+    margin: 0;
+  }
+  
+  .date {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .entry {
+    border: 2px solid #9b2915;
+    background-color: #f2e8d6;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  th {
+    background-color: #9b2915;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  td {
+    border: 2px solid #9b2915;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: #9b2915;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+  }
+  
