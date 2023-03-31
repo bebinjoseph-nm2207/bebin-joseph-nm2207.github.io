@@ -2,7 +2,9 @@ fetch('../resources/ChinaSEAarmsexports.csv')
   .then(response => response.text()) // Get CSV contents as string
   .then(csvString => {
     const rows = csvString.split('\n'); // Split CSV string into rows
+    console.log(rows);
     const headers = rows[0].split(','); // Get headers from first row
+    console.log(headers);
     const data = []; // Array to store data
 
     for (let i = 1; i < rows.length; i++) {
@@ -16,6 +18,6 @@ fetch('../resources/ChinaSEAarmsexports.csv')
       data.push(rowObject); // Add object to data array
     }
 
-    console.log(data); // Output: array of objects with key-value pairs for each row
+    //console.log(data); // Output: array of objects with key-value pairs for each row
   })
   .catch(error => console.error(error));
