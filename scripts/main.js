@@ -1,23 +1,25 @@
 fetch('../resources/ChinaSEAarmsexports.csv')
-  .then(response => response.text()) // Get CSV contents as string
+  .then(response => response.text())
   .then(csvString => {
-    const rows = csvString.split('\n'); // Split CSV string into rows
-    console.log(rows);
-    const headers = rows[0].split(','); // Get headers from first row
-    console.log(headers);
-    const data = []; // Array to store data
-
+    const rows = csvString.trim().split('\n');
+    console.log("This is rows"+rows);
+    const headers = rows[0].split(',');
+    console.log("This is headers"+headers);
+    const data = {};
     for (let i = 1; i < rows.length; i++) {
-      const values = rows[i].split(','); // Split row into values
-      const rowObject = {};
-
-      for (let j = 0; j < values.length; j++) {
-        rowObject[headers[j]] = values[j]; // Add key-value pairs to object
+      const cols = rows[i].split(',');
+      const country = cols[0];
+      data[country] = {};
+      console.log("This is country"+ country);
+      for (let j = 1; j < cols.length; j++) {
+        const year = headers[j];
+        const value = parseInt(cols[j]);
+        data[country][year] = value;
       }
-
-      data.push(rowObject); // Add object to data array
     }
-
-    //console.log(data); // Output: array of objects with key-value pairs for each row
+    console.log("This is data"+ data);
   })
-  .catch(error => console.error(error));
+  .catch(error => {
+    console.error('Error fetching CSV file:', error);
+  });
+
