@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../resources/medievaldiary.jpg" type="image/x-icon"/>
+    <title>My Diary</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="page">
+    <div class="header">
+        <h1>Week 11 Diary</h1>
+        <div class="date">Dear Diary,</div>
+        <h2>This is my progress so far as of 1<sup>st</sup> April 2023</h2>
+      </div>
+        <div class="content">
+            <div class="entry">
+                <b>Data</b><br>I have converted the data in the 2 xlsx files(ie the ones with the data on arms exports of China and India) to csv files. The data is arranged such that the first row for both files on China and India contains the header values "Countries" and the years from 1991-2022. The first column of both files mentions all the different arms recipient countries respectively. And, each cell represents the value of arms transfer from China or India (based on the file) to the recipient country of a specific year. I will talk more about how I converted the csv files into arrays in the "Errors & Challenges" section. Furthemore, I have split the data in the csv files into a list of arrays where each array is a row on the csv file and will be used as a label when I plot the time-series data of arms transfers to different countries over the specificed time period. I will also create an array with the names of the different countries as a label to show how the arms transfers looks like between different recipient countries.<br>The data does show that Chinese arms exports dwarfs Indian arms exports and I have also mentioned this previously. This suggests the ineffectiveness of India's policy but after I conduct more data visualizations, I will be able to show deeper nuances behind this. It is important to recognize that arms transfers constitute one part (although a major part) of defence diplomacy which in turn is one part (although a major part) of understanding the effectiveness of such a broad policy. Since, I have a very specific focus, I will carefully study the data visualizations to see if I can glean more insights.
+            </div>
+            <div class="entry">
+                <b>Visualization</b><br>I am fairly certain of the visualizations I plan to use. Since my data is now inputted into the JS code, I take that as the largest obstruction cleared(yay!).<br>Firstly, I will generate a bar graph with two columns comparing the total (over all years to all recipient countries) value of arms exports of China and India. This will provide a quick overview to the reader to help them understand the scale of difference of Indian and Chinese defence-oriented engagement with the region. I will then generate a line chart to show how the total value of Indian and Chinese arms exports have grown (or fallen) over the years. So, this linechart will sum up the values for all recipient countries of each year and compare the relationship across all years. So far, these things have been mentioned in the week 10 submission (ie the draft website from Week 10). However, after thinking about it, I realized I also need to show how the arms exports have changed across the years for the different recipient countries. I am still deciding whether I will use a single linechart or barchart to compare the levels. This will depend on what I think will best reflect the relationship. Other than that, I don't have any further visualizations I plan to use.
+            </div>
+            <div class="entry">
+                <b>About Chat-GPT</b><br>Chat-GPT has helped me tremendously. It provided me with the skeletal code for various html elements like tables and css design ideas. However, I have not blankly copied from it, instead I copy over the code and I modify it to suit my specifc needs. Chat-GPT has served me more as a tool (like a calculator) in providing me with skeletal code which otherwise would have taken me significantly longer periods of time to code from scratch. However, I still have to know enough to make sense of the code so I can adjust it accordingly.<br>Even my new website extensively involves Chat-GPT, I gave it a prompt to create a website with a navbar with different sections where each section has a colour gradient. After copying over the code, I modified it to create new sections, change the background images, update the values, etc. However, this new website does not have the placeholders like that of the Week 10 submission, but it will be in there soon. 
+            </div>
+            <div class="entry">
+                <b>Errors & Challenges</b><br>As mentioned in the previous diary entry, there are some limitations with the data such as the omission of Indian arms exports to Vietnam. I am still working around it. However, I will continue referring to my current data source and modify it accordingly as it is mostly accurate from my understanding of this topic. Because of some CORS policy, I could not use fetch api to process the csv file through the JS code so I (& Chat-GPT but again it only provided the skeleton and it did a bad job in in how it initialized the variables as it mixed up global and local variables) wrote a code in python to convert the csv file into a list of arrays and I copied off each array into my JS code. It is a pretty cool experience to apply what I learnt from an online course to solve a problem here. I was also working on my storyboard on the main website but I had several difficulties with creating texts in different boxes. I first tried using the canvas html element but writing the JS code to split the text into different lines in the canvas element was a nightmare and Chat-GPT was useless in helping me with that. Ultimately, I solved it as I recalled how using CSS, I could create different "boxes". I learnt this from an online course from U-Mich where CSS was used to manipulate how different pieces of texts were shown on the website. So, I used Chat-GPT to write me the code to use CSS instead which I modified to suit the design requirements of my website like the grid-gap.
+            </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Created with the help of online tools</p>
+    </div>
+    </div>
+  </body>
+</html>
