@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../resources/medievaldiary.jpg" type="image/x-icon"/>
+    <title>My Diary</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="page">
+    <div class="header">
+        <h1>Week 12 Diary</h1>
+        <div class="date">Dear Diary,</div>
+        <h2>This is my progress so far as of 8<sup>th</sup> April 2023</h2>
+      </div>
+        <div class="content">
+            <div class="entry">
+                <b>Data storyboard progress</b><br>I have finalized the storyboard and I have charted out the direction that my analysis will take. My next goal would be to complete the analyses and provide the conclusion. I am still thinking whether to provide a policy recommendation or an overview of the whole narrative surrounding arms transfers (bearing in mind the deadlines and mental health) for the conclusion. I do not have more things to add on to my plan for the analyses as that has already been outlined previously and I do not expect to deviate from that.
+            </div>
+            <div class="entry">
+              <b>Visualization progress</b><br>I will save the comments for the challenges I faced in the section below. So far, I have managed to create 3 charts. One barchart comparing the total value of arms transfers for the entire time period. And, I also have 2 line charts for India and China comparing the total yearly values of arms transfers. My next goal would be to complete the remaining charts that have been mentioned in the previous diary entry. I do not expect further challenges to that as I have mostly figured out how to place multiple charts in the same website. I am excited to place the choropleth map later this week. I am sure more challenges will come up with it but, I will take it as it goes.
+            </div>
+            <div class="entry">
+                <b>Errors & Challenges</b><br>I focused mostly on the storyboard and the creation of the charts. There were not any errors and challenges I faced on the storyboard as all the errors associated with its manipulation were addressed in the previous weeks. However, I faced significant challenges when I prepared the charts. Firstly, having multiple charts in the same webpage posed the challenge of deconflicting the IDs and ensuring that the Chart.js invoked did not confuse between the data for the different charts. This was a huge headache when I had to scroll through line after line in main.js. What I found helpful in addressing this is commenting the start and end of the code so I know exactly where to find the js code for the different charts. This helped me tremendously in debugging the code when I ran into errors. This brings me to the next challenge I faced. As I was copying the code from the previous codealongs for the bar chart and the line charts, there were issues with the code for the line charts as I could not get the values such as the title of the chart to show up on the website. Chat-GPT helped me tremendously here by debugging my code and pointing to me that the 'options' section for the line chart was under the 'data' section. These kind of errors can be very hard for me to spot as I can get lost in the curly braces and other brackets. So, for very technical issues like this, chat-gpt can be helpful. I also faced another significant challenge when it came to placing the charts within the 'data visualization' section of the webpage. I wanted to centre align the the charts but, the existing CSS rules made it very confusing for me to do so. I tried using Chat-GPT to help me navigate through the CSS rules but that was not helpful. I had to go through the CSS line by line. However, what helped me was my CSS training that helped me identify the relevant conflicting rules. For example, the canvas elements were in different div tags and those tags had differing CSS rules. So, once I addressed the conflicting rules in the outer div tags, the problem was mostly resolved. However, I still have to figure out how to centre align the charts for all displays since my current approach is optimized for my laptop. The issue of conflicting CSS rules due to outer tags also affected the display of the subpages within the 'data visualization' section. What happened was the navbar for the subpage feature in the data visualization section was arranged vertically instead of horizontally. This was also resolved by looking at the relevant CSS rules by examining the styles of the outer tags which caused the display to be vertical. I resolved this by creating a new style for the subpage feature section which involved setting the flex direction to row. Usually, this would not be required but since the outer tags had a different flex orientation, I had to specify it.
+             </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Created with the help of online tools</p>
+    </div>
+    </div>
+  </body>
+</html>

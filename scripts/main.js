@@ -41,7 +41,7 @@ const inSL= ['Sri Lanka', '0', '0', '0', '0', '0', '0', '0', '0', '0', '16', '0'
 const inYearTot= ['0', '0', '0', '0', '0', '0', '0', '0', '0', '21', '0', '0', '0', '0', '0', '19', '24', '15', '0', '0', '0', '0', '6', '0', '27', '12', '37', '37', '3', '148', '0', '7', '356']
 //End of imported data section
 
-//Code for changing subpage within Data section
+//Code for changing subpage within Data section taken from w3schools
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
