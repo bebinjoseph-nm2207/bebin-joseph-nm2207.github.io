@@ -1,20 +1,23 @@
 <!--I used Chat-GPT for the bulk of this HTML document but, I have also modified this substantially to meet my specific requirements-->
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>My Data Story</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script defer type="text/javascript" src="scripts/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
 </head>
+
 <body>
 	<header>
 		<nav>
 			<ul>
 				<li><a href="#introduction">Introduction</a></li>
-                <li><a href="#topic">Topic</a></li>
+				<li><a href="#topic">Topic</a></li>
 				<li><a href="#data">Data Visualization</a></li>
 				<li><a href="#analysis">Analysis</a></li>
 				<li><a href="#conclusion">Conclusion</a></li>
@@ -25,29 +28,85 @@
 	<main>
 		<section id="introduction">
 			<h2>Introduction</h2>
-			<p>Hello! Welcome to my data story project for NM2207. Join with me on a brief exploration of making sense of a very specific part of Indian Foreign Policy. <br>Now, you might be wondering, what motivated me to choose this topic given that South Asian awareness is rather low in Singapore. Well, I took a class on South Asian IR and I fondly recall 2 days before my 3000 word essay was due, I met an IR scholar who completely disagreed with my essay and this datastory is dedicated to the interaction I had with that scholar.</p>
+			<p>Hello! Welcome to my data story project for NM2207. Join with me on a brief exploration of making sense
+				of a very specific part of Indian Foreign Policy. <br>Now, you might be wondering, what motivated me to
+				choose this topic given that South Asian awareness is rather low in Singapore. Well, I took a class on
+				South Asian IR and I fondly recall 2 days before my 3000 word essay was due, I met an IR scholar who
+				completely disagreed with my essay and this datastory is dedicated to the interaction I had with that
+				scholar.</p>
 		</section>
 
-        <section id="topic" style="background-image: url(resources/raovaj.jpg);">
-            <h2>Topic</h2>										   
+		<section id="topic" style="background-image: url(resources/raovaj.jpg);">
+			<h2>Topic</h2>
 			<div class="box">
-				<div class="box-item"><b>(1)What is the background to my story?</b><br>For several decades, the Indian elite have talked alot about countering Chinese influence and I want to see what the Indians have done about this.<br>And you see the 4 people here? Well, these are the 4 characters central to the background of my datastory.</div>
-				<div class="box-item"><b>(2)Who are these folks?</b><br>Clockwise from top left are, Narasimhao Rao, Atul Bihari Vajpayee, Narendra Modi, and Manmohan Singh. They were former Prime Ministers of India (except Modi, who is the current PM from 2014) and they were all intimately involved with India's "Look East" policy.</div>
-				<div class="box-item"><b>(3)So, what is the "Look East" policy?</b><br>This policy was launched during the tenure of Rao in the 1990s to counter rising Chinese influence by increased engagement with Southeast Asia. <br>On a side note, the policy was renamed to "Act East" when Modi became PM in 2014, but for this datastory, I will refer to this policy as "Look East" as the fundamental strategic direction of the policy remains largely the same.</div>
-				<div class="box-item"><b>(4)Then what exactly is this datastory about and what am I trying to answer?</b><br>Simply put, I am trying to explore whether India has done enough to counter Chinese influence since the implementation of this policy.</div>
+				<div class="box-item"><b>(1)What is the background to my story?</b><br>For several decades, the Indian
+					elite have talked alot about countering Chinese influence and I want to see what the Indians have
+					done about this.<br>And you see the 4 people here? Well, these are the 4 characters central to the
+					background of my datastory.</div>
+				<div class="box-item"><b>(2)Who are these folks?</b><br>Clockwise from top left are, Narasimhao Rao,
+					Atul Bihari Vajpayee, Narendra Modi, and Manmohan Singh. They were former Prime Ministers of India
+					(except Modi, who is the current PM from 2014) and they were all intimately involved with India's
+					"Look East" policy.</div>
+				<div class="box-item"><b>(3)So, what is the "Look East" policy?</b><br>This policy was launched during
+					the tenure of Rao in the 1990s to counter rising Chinese influence by increased engagement with
+					Southeast Asia. <br>On a side note, the policy was renamed to "Act East" when Modi became PM in
+					2014, but for this datastory, I will refer to this policy as "Look East" as the fundamental
+					strategic direction of the policy remains largely the same.</div>
+				<div class="box-item"><b>(4)Then what exactly is this datastory about and what am I trying to
+						answer?</b><br>Simply put, I am trying to explore whether India has done enough to counter
+					Chinese influence since the implementation of this policy.</div>
 				<div class="box-item">Gonna add more stuff here</div>
 				<div class="box-item">And here</div>
 			</div>
-        </section>
+		</section>
 
-        <section id="topic">
-            <h2>Topic</h2>
-            <p></p>
-        </section>
+		<section id="topic">
+			<h2>Topic</h2>
+			<p></p>
+		</section>
 
 		<section id="data">
 			<h2>Data Visualization</h2>
 			<p>Here's your data visualization(s).</p>
+			<div class="tab-container" style="width: 90%;">
+					<div class="tab-nav" style="display: flex;">
+						<button class="tablink" onclick="openPage('Overview', this, 'red')" id="defaultOpen">Home</button>
+						<button class="tablink" onclick="openPage('Detailed', this, 'green')" >News</button>
+						<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+						<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+					</div>
+					<div class="tab-content-container">
+						<div id="Overview" class="tabcontent">
+							<div>
+								<canvas id="totBarChart"></canvas>
+							</div>
+			
+							<h3>Home</h3>
+							<p>Home is where the heart is..</p>
+						</div>
+
+						<div id="Detailed" class="tabcontent">
+							</table>
+							<div class ="detCanvCont">
+								<canvas id="inLineYrTotChart"></canvas>
+								<canvas id="chLineYrTotChart"></canvas>
+							</div><br>
+							<h3>News</h3>
+							<p>Some news this fine day!</p>
+						</div>
+
+						<div id="Contact" class="tabcontent">
+							<h3>Contact</h3>
+							<p>Get in touch, or swing by for a cup of coffee.</p>
+						</div>
+
+
+						<div id="About" class="tabcontent">
+							<h3>About</h3>
+							<p>Who we are and what we do.</p>
+						</div>
+					</div>
+			</div>
 		</section>
 
 		<section id="analysis">
@@ -64,10 +123,12 @@
 			<h2>Others</h2>
 			<p>Hey there, you can find other links related to my project assignment here!</p>
 			<ul>
-				<li>Here's my <a href="Storyboard.html" target="_blank">storyboard</a> with the broad sketch of my data story</li>
+				<li>Here's my <a href="Storyboard.html" target="_blank">storyboard</a> with the broad sketch of my data
+					story</li>
 				<li>And here's my <a href="Final Project Document.html" target="_blank">final project document</a></li>
 				<li>Here is my Week 10 <a href="diaryentries/w10diaryentry.html" target="_blank">diary entry</a></li>
-				<li>This is the <a href="archivedindex.html" target="_blank">draft website</a> from my Week 10 submission</li>
+				<li>This is the <a href="archivedindex.html" target="_blank">draft website</a> from my Week 10
+					submission</li>
 				<li>Here is my Week 11 <a href="diaryentries/w11diaryentry.html" target="_blank">diary entry</a></li>
 			</ul>
 		</section>
@@ -77,4 +138,5 @@
 		<p>&copy; 2023 My Data Story. All rights reserved.</p>
 	</footer>
 </body>
+
 </html>

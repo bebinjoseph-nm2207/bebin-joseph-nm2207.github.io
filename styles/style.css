@@ -51,7 +51,7 @@ main {
 section {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*This messes up my navbar in data*/
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -120,12 +120,84 @@ section:nth-of-type(even) {
   background-size: cover;
   background-position: center;
   color: #fff;
+  height: 1000px;
 }
 
 #data h2 {
   font-size: 48px;
   margin-bottom: 10px;
 }
+
+/*Navbar in Data*/
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float:left ;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 90%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Overview {background-color: red;}
+#Detailed {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+
+/*Detailed Section styling*/
+.detCanvCont {
+    display: flex;
+    flex-direction: row;
+    height: 300px; 
+    width: 500px;
+    left: 10%;
+    position: relative;
+}
+
+/*Canvas styling*/
+#totBarChart {
+  background-color: aquamarine;
+  height: 300px;
+  left: 30%;
+  position: relative;
+}
+
+#inLineYrTotChart {
+  background-color: rgb(247, 247, 247);
+  position: relative;
+}
+
+#chLineYrTotChart {
+  background-color: rgb(247, 247, 247);
+  position: relative;
+}
+
+
 
 #analysis {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)), url();
