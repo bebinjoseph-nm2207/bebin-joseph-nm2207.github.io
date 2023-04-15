@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script defer type="text/javascript" src="scripts/main.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+	<script src='https://cdn.plot.ly/plotly-2.18.2.min.js'></script>
 
 </head>
 
@@ -18,6 +19,7 @@
 			<ul>
 				<li><a href="#introduction">Introduction</a></li>
 				<li><a href="#topic">Topic</a></li>
+				<li><a href="#methodology">Methodology</a></li>
 				<li><a href="#data">Data Visualization</a></li>
 				<li><a href="#analysis">Analysis</a></li>
 				<li><a href="#conclusion">Conclusion</a></li>
@@ -27,6 +29,7 @@
 	</header>
 	<main>
 		<section id="introduction">
+			<!--<canvas id="myDiv"></canvas>-->
 			<h2>Introduction</h2>
 			<p>Hello! Welcome to my data story project for NM2207. Join with me on a brief exploration of making sense
 				of a very specific part of Indian Foreign Policy. <br>Now, you might be wondering, what motivated me to
@@ -36,7 +39,7 @@
 				scholar.</p>
 		</section>
 
-		<section id="topic" style="background-image: url(resources/raovaj.jpg);">
+		<section id="topic" style="background-image: url(resources/raovaj.jpg);"><!--Image taken from https://www.oneindia.com/feature/2013/rao-handed-over-onus-vajpayee-can-today-leaders-learn-1137069.html-->
 			<h2>Storyboard</h2>
 			<div class="box">
 				<div class="box-item"><b>(1)What is the background to my story?</b><br>For several decades, the Indian
@@ -53,7 +56,6 @@
 					2014, but for this datastory, I will refer to this policy as "Look East" as the fundamental
 					strategic direction of the policy remains largely the same.</div>
 			</div>
-			<h2 style="color: black;">Scroll down!</h2>
 		</section>
 
 		<section id="topic">
@@ -67,73 +69,97 @@
 		</div>
 		</section>
 
+		<section id="methodology">
+			<h2>Methodology</h2>
+			<p>The most important aspect of this project is the data gathering. I am very fortunate that the <a href="https://www.sipri.org/" target="_blank">Stockholm International Peace Research Institute</a> neatly compiled the data on arms transfers. I used their <a href="https://www.sipri.org/databases/armstransfers">database</a> to access the data for Chinese and Indian arms transfers from 1991-2022.</p>
+			<p><i>The SIPRI Arms Transfers Database contains information on all transfers of major conventional weapons from 1950 to the most recent full calendar year. It is a unique resource for researchers, policy-makers and analysts, the media and civil society interested in monitoring and measuring the international flow of major conventional arms.</i><br><b>Taken from <a href="https://www.sipri.org/databases/armstransfers">SIPRI arms database</a></b>.</p>
+			<p>How does SIPRI measure the value of arms transfers?<br>SIPRI has developed a unique way of measuring the value of arms transfers by looking at the known unit production cost of weapons. This metric is known as the Trend Indicator Value (TIV). What makes this metric relevant to my datastory is that I can directly compare the scale of arms transfers from India and China to Southeast Asia. More information about this can be found <a href="https://www.sipri.org/databases/armstransfers/sources-and-methods">here</a>.</p>
+			<p>The TIV is not tagged to any currency like the USD but I have seen some papers conflating the TIV to US dollars like this <a href="https://www.orfonline.org/expert-speak/the-importance-of-indias-defence-partnership-with-vietnam/#:~:text=As%20part%20of%20the%20US,submarine%20torpedoes%2C%20and%20coastal%20radars.">one</a>. For this datastory, all values in the charts below will be measured in millions of TIV.</p>
+			<p>If you are familiar with Southeast Asia, you would know that Bangladesh and Sri Lanka do not formally fall under that region. However, I have included them in my analyses due to two reasons. Firstly, by virtue of their proximity and historical connections, they are intimately connected with Southeast Asia. Secondly, from New Delhi's perspective, those countries would be relevant in the broader Indian efforts of resisting Chinese influence.</p>
+		</section>
+
 		<section id="data">
-			<h2>Data Visualization</h2>
-			<p>Here's your data visualization(s).</p>
+			<h2>Data Visualizations</h2>
 			<div class="tab-container" style="width: 90%;">
 					<div class="tab-nav" style="display: flex;">
-						<button class="tablink" onclick="openPage('Overview', this, 'red')" id="defaultOpen">Home</button>
-						<button class="tablink" onclick="openPage('Detailed', this, 'green')" >News</button>
-						<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-						<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+						<button class="tablink" onclick="openPage('Overview', this, 'red')" id="defaultOpen">Overview</button>
+						<button class="tablink" onclick="openPage('Detailed', this, 'green')" >Yearly breakdown</button>
+						<button class="tablink" onclick="openPage('Contact', this, 'blue')">Arms transfer by country</button>
 					</div>
 					<div class="tab-content-container">
 						<div id="Overview" class="tabcontent">
 							<div>
 								<canvas id="totBarChart"></canvas>
 							</div>
-			
-							<h3>Home</h3>
-							<p>Home is where the heart is..</p>
+							<p>On the surface, these values highlight the inadequacy of India's efforts in engaging with the region through the bolstering of defence capabilities as Beijing's engagement dwarfs India's involvement. This piece of data, in of itself, suggests that New Delhi's overall performance through the specific domain of defence-oriented engagement has been extremely poor.</p>
+							<p>Why is this so? Well, it has been 32 years since the implementation of the "Look East" policy and although it is understandable that China's industrialization took by the 90s, there certainly was not any shortage of time for New Delhi to play catch-up. However, let us further explore some of the deeper nuances of what has risen from this policy through the other charts.</p>
 						</div>
 
 						<div id="Detailed" class="tabcontent">
-							</table>
+							
 							<div class ="detCanvCont">
 								<canvas id="inLineYrTotChart"></canvas>
 								<canvas id="chLineYrTotChart"></canvas>
-							</div><br>
-							<h3>News</h3>
-							<p>Some news this fine day!</p>
+							</div>
+							<p>These charts show how total arms transfers have changed over the years from India and China respectively. Although, Indian defence-oriented engagement has been noted to be abysmal, there tends to be a general positive relationship in arms transfers from India over the years. Quite notably in 2020, India transferred a record amount of arms surpassing China's total arms transfer for that year.</p>
 						</div>
 
 						<div id="Contact" class="tabcontent">
-							<h3>Contact</h3>
-							<p>Get in touch, or swing by for a cup of coffee.</p>
-						</div>
-
-
-						<div id="About" class="tabcontent">
-							<h3>About</h3>
-							<p>Who we are and what we do.</p>
+							<div class="detCanvCont">
+								<canvas id="inLinChart"></canvas>
+								<canvas id="chLinChart"></canvas>
+							</div>
+							<p>These charts show how arms transfers vary across different recipient countries. This is very interesting as it provides a deeper perspective in understanding how the changes in the yearly total value of arms transfer can be associated with the geopolitical circumstances of the different time periods. I will elaborate more on this in the analysis section.</p>
+							<p>However, it is interesting to point out that there has been a general upward trend in Indian arms transfers to Sri Lanka and Myanmar. This could be indicative of an increasing presence of New Delhi's influence in the region.</p>
 						</div>
 					</div>
 			</div>
 		</section>
 
 		<section id="analysis">
-			<h2>Analysis</h2>
-			<p>Here's some text analyzing the data visualization(s).</p>
+			<h2>Overall Analysis (Overview barchart)</h2>
+			<p>The visualized data has presented many interesting findings and it will be very hard to address all of them simultaneously. For this analysis, I will explore the significance of the overall value of arms transfers and conclude the analysis by exploring India's and China's relationship with the different arms recipient countries. I must also acknowledge that the creation of this datastory does not only lie in what the data presents, but also where the data is absent. This holistic approach will be considered through the different aspects of my analysis mentioned above.</p>
+			<p>What immediately comes to our attention is how the Chinese defence industry dwarfs India's capabilities. This should not be a surprise since, by the time India embarked on the "Look East" policy, Chinese influence on Southeast Asia was rapidly growing. Therefore, this presents several challenges in analyzing the effectiveness of New Delhi's initiative.</p>
+			<p>I have already mentioned earlier that despite having 32 years to counter Chinese influence, India has not done a great job in closing the gap with China. There are several reasons as to why India has struggled to meet the defence needs of the different countries such as proving the credibility of Indian arms which ties into factors like R&D and manufacturing capabilities. I will not explore this further as this is beyond the scope of this datastory. Instead, I am trying to give context in making sense of the discrepancy in the total value of Chinese and Indian arms transfers.</p>
+			<h2>Yearly Analysis (Yearly breakdown line charts)</h2>
+			<p>Although, New Delhi largely lags behind Beijing in transferring arms, there has been a general upward trend in Indian arms transfers over the years. Quite notably in 2020 when New Delhi transferred 148 million TIV worth of weapons. At this period, Chinese arms transfers fell to 48 million TIV.</p>	
+			<p>The Indian elite may be tempted to think India had overtaken China in 2020 however, this turned out to be more of an anomaly from the Chinese side and Chinese arms transfers rose again in 2021 & 2022. Furthermore, Chinese arms transfers have also generally risen over the years, although they tend to fluctuate significantly. In the current context of comparing to Indian arms transfers, I don't think this challenges the dominance of Chinese influence since even when Chinese arms transfers fall they are generally largely above Indian arms transfers. And, although Indian arms transfers have generally risen, the overall pace at which they have risen does not seem to threaten the current dominance held by the Chinese.</p>
+		</section>
+
+		<section id="analysis">
+			<h2>Country Specific Analysis (Arms transfer by country line charts)</h2>
+			<p>Looking at how arms transfers have varied across the years by country allows us to explore several things. Firstly, we can better visualize how arms transfers to the region looks like and also quite interesting are things that are absent in this data. What do I mean by that? Well let me first explore the significance of the first aspect, ie the direct data on arms transfers.</p>
+			<p>What I find very exciting about this visualization is that it challenges the perceived impact of arms transfers by Beijing as compared to India as suggested by the previous visualizations. Bangladesh accounted for the largest share of arms transfers followed by Myanmar. Furthemore, if I were to remove Sri Lanka also, the scale of the chart becomes the same as that of India. This fascinates me because the data suggests that ASEAN states are not deeply subject to Chinese influence through arms transfers (although they could be subject to Chinese influence through other means but that is beyond the scope of this datastory).</p>
+			<p>Given the vast differences in the industrial output between India and China, it is quite surprising to see that the difference in arms transfers from India and China to ASEAN states are drastically lower than what the overview barchart suggests. And although Beijing transfers more than New Delhi, that gap seems insignificant. Now, this presents a strategic opportunity for India to capitalize on the growing defence needs of Southeast Asian countries which I will elabore more in the next section. I also think it's interesting that in this region, the largest share of arms transfers have been to Bangladesh(only for China), Sri Lanka and Myanmar. </p>
+			<p>This is where I want to explore, through the absence of data, the other part of this story. The disproportionate share of arms transfers to the above countries points to China's inability to form intimate defence relationships with ASEAN states in general. There are exceptions like Cambodia, but even they do not receive significant amount of arms to suggest Chinese defence-oriented dominance in Southeast Asia. There are reasons for this, most notably, the South China Sea dispute between China and several ASEAN states has resulted in hesitancy in cozying up to China.</p>
+			<p>This is interesting because, with the exception of Singapore, most ASEAN states have traditionally relied on Soviet and post-Soviet era weaponry which the Chinese have also traditionally based off its weaponry. And yet, the Chinese have struggled to penetrate the ASEAN market. This reinforces the existing narrative surrounding the weariness in ASEAN against Beijing. Of course, there are many caveats and nuances to this but, I am specifically exploring this through the lens of defence and I would leave it to IR scholars to determine how the defence aspect interacts with the economic and political factors in determining overall relationship with Beijing.</p>
 		</section>
 
 		<section id="conclusion">
-			<h2>Conclusion</h2>
-			<p>Here's some text summarizing your findings and providing some insights.</p>
+			<h2>Policy evaluation</h2>
+			<p>The analysis of this datastory has complicated the initial judgement of the effectiveness of the "Look East" policy. The presence of Bangladesh and Sri Lanka, while relevant to understanding the broader significance of Chinese influence, masks Beijing's difficulties in having deeper sustained defence-oriented engagements with ASEAN states. Myanmar and Cambodia have traditionally been Chinese allies which also explain why they have received the largest share of Chinese arms in ASEAN. However, that picture is slowly changing, especially with the rise in Indian arms transfer to Myanmar. Therefore, by strictly looking at ASEAN, while India has not overtaken China, New Delhi's efforts to close the gap can be seen.</p>
+			<p>Thus, in the context of ASEAN, India's "Look East" policy has not failed and surprisingly, it has achieved some success. However,India's eastward pivot would be restricted by the dominance of the Chinese in Bangladesh and Sri Lanka.</p>
+			<h2>Future recommendations</h2>
+			<p>This brings us to what New Delhi needs to consider moving forward. Firstly, New Delhi's success in ASEAN can not be attributed to India's strengths but it rests more on China's weakness in assuaging the concerns of ASEAN states. This can change and I would leave it to IR scholars to predict how China-ASEAN relations would look like in the long term. However, New Delhi must pick up the slack caused by these tensions and demonstrate to ASEAN states that India is a reliable partner willing to stand by them.</p>
+			<p>In this regard, New Delhi has wooed Hanoi with offers of line of credit to purchase Indian arms. While there have been bilateral talks, we have yet to see India formally transfer arms to Vietnam (which has been increasingly weary of Chinese influence in the region and a claimant in the South China Sea dispute).Whether such programs would be effective in gaining popularity in ASEAN depends on India's weapons R&D and manufacturing capabilities in ensuring recipient countries receive timely arms deliveries that satisfies their strategic needs.</p>
 		</section>
 
 		<section id="misc">
-			<h2>Others</h2>
-			<p>Hey there, you can find other links related to my project assignment here!</p>
-			<ul>
-				<li>Here's my <a href="Storyboard.html" target="_blank">storyboard</a> with the broad sketch of my data
-					story</li>
-				<li>And here's my <a href="Final Project Document.html" target="_blank">final project document</a></li>
-				<li>Here is my Week 10 <a href="diaryentries/w10diaryentry.html" target="_blank">diary entry</a></li>
-				<li>This is the <a href="archivedindex.html" target="_blank">draft website</a> from my Week 10
-					submission</li>
-				<li>Here is my Week 11 <a href="diaryentries/w11diaryentry.html" target="_blank">diary entry</a></li>
-				<li>Here is my Week 12<a href="diaryentries/w12diaryentry.html">diary entry</a></li>
-			</ul>
+			<div id="miscstyle">
+				<h2>Others</h2>
+				<p>Hey there, you can find other links related to my project assignment here! <br>This is where you can learn more about the whole process behind the creation of this datastory.</p>
+				<ul>
+					<li>Here's my <a href="Storyboard.html" target="_blank">storyboard</a> with the broad sketch of my data
+						story</li>
+					<li>And here's my <a href="Final Project Document.html" target="_blank">final project document</a></li>
+					<li>Here is my Week 10 <a href="diaryentries/w10diaryentry.html" target="_blank">diary entry</a></li>
+					<li>This is the <a href="archivedindex.html" target="_blank">draft website</a> from my Week 10
+						submission</li>
+					<li>Here is my Week 11 <a href="diaryentries/w11diaryentry.html" target="_blank">diary entry</a></li>
+					<li>Here is my Week 12 <a href="diaryentries/w12diaryentry.html" target="_blank">diary entry</a></li>
+					<li>Here is my <a href="finalwriteup.html">final write up</a></li>
+				</ul>
+			</div>
 		</section>
 
 	</main>

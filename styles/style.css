@@ -66,7 +66,7 @@ section:nth-of-type(even) {
 }
 
 #introduction {
-  background-image: url(../resources/brahmospic.jpg);
+  background-image: url(../resources/brahmospic.jpg); /*https://www.outlookindia.com/international/philippines-to-procure-brahmos-missiles-from-india-signs-usd-374-million-deal-news-48124*/
   background-size: cover;
   background-position: center;
   color: #000;
@@ -86,7 +86,7 @@ section:nth-of-type(even) {
   width: 85%;
 }
 
-/* Divs in Intro */
+/* Divs in Topic */
 
 .box {
   display: grid;
@@ -104,7 +104,7 @@ section:nth-of-type(even) {
 }
 
 #topic {
-  background-image: url(../resources/manmodi.jpg);
+  background-image: url(../resources/manmodi.jpg); /*https://www.latestly.com/india/politics/manmohan-singh-writes-to-pmo-amit-shah-over-retinue-downsized-reminds-atal-bihari-vajpayees-case-964487.html*/
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -115,11 +115,32 @@ section:nth-of-type(even) {
   margin-bottom: 10px;
 }
 
+#methodology {
+  background-image: url(../resources/harvardmethodologypic.jpg); /*https://pll.harvard.edu/course/advanced-quantitative-research-methodology-0?delta=0*/
+  background-size: cover;
+  background-position: center;
+  color: #000;
+}
+
+#methodology h2 {
+  background-color: #ddd;
+  font-size: 48px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#methodology p{
+  background-color: #ddd;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 85%;
+}
+
 #data {
   background-image: url(../resources/south_east_asia_map.jpg);/*http://www.indiandefencereview.com/news/south-and-southeast-asia-a-peep-into-the-future/*/
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #000;
   height: 1000px;
 }
 
@@ -167,7 +188,6 @@ body, html {
 #Overview {background-color: red;}
 #Detailed {background-color: green;}
 #Contact {background-color: blue;}
-#About {background-color: orange;}
 
 /*Detailed Section styling*/
 .detCanvCont {
@@ -185,22 +205,41 @@ body, html {
   height: 300px;
   left: 30%;
   position: relative;
+  border-radius: 10px;
 }
 
 #inLineYrTotChart {
   background-color: rgb(247, 247, 247);
   position: relative;
+  border-radius: 10px;
+  border-color: #000;
 }
 
 #chLineYrTotChart {
   background-color: rgb(247, 247, 247);
   position: relative;
+  border-radius: 10px;
+  border-color: #000;
 }
 
+#inLinChart {
+  background-color: rgb(247, 247, 247);
+  position: relative;
+  border-radius: 10px;
+  border-color: #000;
+}
+
+#chLinChart {
+  background-color: rgb(247, 247, 247);
+  position: relative;
+  border-radius: 10px;
+  border-color: #000;
+}
+/*End of canvas styling*/
 
 
 #analysis {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)), url();
+  background-image: url(../resources/analysispic.jpg);/*https://cismairgroup.com/deep-analysis/*/
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -211,23 +250,38 @@ body, html {
   margin-bottom: 10px;
 }
 
-#conclusion {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)), url();
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+#analysis p{
+  background-color: black;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 85%;
 }
 
+#conclusion {
+  background-image: url(../resources/conclusionpic.jpg); /*https://www.aseanbriefing.com/news/asean-india-trade-in-goods-agreement/*/
+  background-size: cover;
+  background-position: center;
+  color: #000;
+}
 #conclusion h2 {
+  background-color: #ddd;
   font-size: 48px;
   margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#conclusion p{
+  background-color: #ddd;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 85%;
 }
 
 #misc {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)), url();
+  background-image: url(../resources/otherspic.jpg); /*https://www.heflo.com/blog/process-mapping/process-mapping-steps/*/
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #000;
 }
 
 #misc h2 {
@@ -241,6 +295,10 @@ body, html {
 
 }
 
+#miscstyle {
+  background-color: #ddd;
+  border-radius: 10px;
+}
 
 
 /* Scrollbar */

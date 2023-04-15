@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--I am using the template from the example final write up-->
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="styles/finalstyle.css">
+    <title>Final Writeup</title>
+    <link rel="icon" href="resources/medievaldiary.jpg" type="image/x-icon">
+
+  </head>
+
+  <body background="resources/deepthought.jpg"><!--go watch hitchhikers guide to the galaxy https://archaeogaming.com/2018/06/21/deep-thought-on-v-1-onsen-iv/2017-06-11-deep-thought/-->
+    <div id="bigDiv">
+        
+        <h2>Project Overview</h2>
+        <p>I had alot of fun (and even more headaches and challenges) with this project. My main inspiration for this project is from my South Asian IR training. When our analyses are dominated by qualitative tools, it becomes easy to fall prey to our personal biases as there are many ways of arguing different positions in IR. Although data visualization is not perfect, this quantitative approach allows us to glean insights which otherwise would be difficult to gather in a sea of competing narratives.</p>
+        <p>This datastory aim to specifically answer whether India's "Look East" policy is effective. Granted, this broad policy can not be answered by a single datastory instead, my project looks at a very specific aspect of the tilt in Indian foreign policy. I chose the domain of defence as this domain is central to the realist paradigm, which dominates contemporary IR thought. However, the defence domain is still too broad and that is why I decided I would specifically focus on arms transfers as opposed to other metrics of defence engagement. This is because the value of arms transfers serve as a useful proxy measure to measure the depth of defence relationships since it signifies the ability and willingness of the exporting and importing countries to engage with each other to serve mutually beneficial strategic interests.</p>
+        <h2>Project design</h2>
+        <p>I have mentioned in the main website that the data gathered is from SIPRI. I had several ideas on how to visualize my data. Eventually, I decided to follow the current structure where I first show the total value of all arms transfers from India and China across all years. This serves as a useful starting point to highlight the enormous differences betweeen Chinese and Indian influence.</p>
+        <p>This was followed by various other line charts to explore some of the deeper nuances which points to areas of optimism for Indian foreign policy and their elites.</p>
+        <h2>Computational stuff</h2>
+        <p>Apart from the content itself, there were many interesting things about developing this datastory. I am not a very creative person so I went online for inspiration and I noticed currently the design of having a fixed navbar on top of the webpage is trendy, so I had Chat-GPT code that for me by giving me the HTML and CSS. So, there was alot of rip/mash/modify from Chat-GPT for my project. I also used w3 schools for some of the coding.</p>
+        <p>There were many challenges I faced when I copied over the code from the various sources. Most notably, as I added on more divs, sections and other components to my HTML, CSS and JS, the code became alot more complex which made it difficult to debug errors. This stretched my ability to think computationally as I simply could not copy the code but also understand how the copied code interacts with the other components of my code. Looking back, being more organized with my code would have helped more as only by week 11-12 did I fully appreciate the need to properly comment my code. If for example, I was dealing with an error in CSS, this practice would allow me to identify where the code was not displaying as expected. For JS, it was usually more on the display of the navbar in the data visualization section.</p>
+        <p>While the process of stretching my computational thinking taught me alot, I also realized my limitations. I tried my best to insert a plotly map into my datastory as that would help to better visualize the changes in the value of arms transfers. Unfortunately, I had many difficulties implementing it and ultimately, I made the decision to scrap that plan. Perhaps, if I had more time, I would look into implementing that but, I am quite happy with the current data visualizations in communicating my datastory.</p>
+        <h2>Project highlights</h2>
+        <p>I was stuck with loading data into my JS code and I used Python to run a for loop to convert each row of the csv files containing the data on Indian and Chinese arms transfers into arrays. This epitomizes the broader concept of computational thinking which this module strive towards as I was able to communicate to the computer through a language, my objective and produce things which saved me alot of time.</p>
+        <p>Using chart.js, I added a barchart to compare the total values of arms transfers over all years, a line chart to compare how yearly total values of arms transfers changed and another linechart to show the transfers varied across recipient countries.</p>
+        <p>I have different sections in my website which can be navigated using the navbar. I also have within my data visualization section, another navbar to show the different charts. While both are similar, their mechanisms are very different as the former primarily uses CSS styling and HTML lists. The latter uses JS to hide and show, on the same part of the webpage, different subsections by using a for loop when the function is invoked through clicking the various buttons in the data visualization section.</p>
+        <h2>Further Reflections</h2>
+        <p>This has opened my eyes to what I can achieve. I did not honestly expect at the start of this module that I would be able to do a project like this. There is a huge sense of accomplishment and also this has given me the confidence to learn new coding languages as I can now appreciate how computers think. I think this whole process has also helped me with the way how I approach problems and manage time as I had to, under time constraints, define my objectives, craft an actionable plan, execute it and debug it.</p>
+        <p>I believe these skills will not only help me in future projects in problem solving but also in empathizing with different group members as these skills help me appreciate that sometimes, things don't work as planned.</p>
+        <p>As I have now been exposed to data visualization, my long term plan is to continue with this project by looking at various other aspects of judging the effectiveness of the "Look East" policy and merge them into one big datastory. I think this project will take me years but, this process has helped me appreciate the power of data visualization and I would like to tap onto it. I am excited to see how this will progress!</p>
+
+  <h2><center>...</center></h2>
+  </div>
+  
+  </body>
+
+</html>
